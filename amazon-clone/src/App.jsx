@@ -9,8 +9,16 @@ import banner1 from './assets/pic1.jpg'
 import banner2 from './assets/pic2.jpg'
 import banner3 from './assets/pic3.jpg'
 import banner4 from './assets/pic4.jpg'
+import card1 from './assets/card1.jpg'
+import card2 from './assets/card2.jpg'
+import card3 from './assets/card3.jpg'
+import card4 from './assets/card4.jpg'
+import DiscountCards from './Cards'
+import ImageGallerySwiper from './ImageGallerySwiper'
 function App() {
+
   const slides = [banner1, banner2, banner3, banner4];
+  const cardSlides = [card1, card2, card3, card4];
   return (
     <div>
       <div class="bg-black h-[65px] flex items-center">
@@ -70,9 +78,72 @@ function App() {
           </ul>
         </nav>
       </div>
-      <div className="">
+      <div className="relative w-full h-screen">
         <CustomSwiper slides={slides} />
+        <DiscountCards numberOfGroups={4} top="top-88" />
+        <ImageGallerySwiper />
+        <div className='mt-10'>
+          <ImageGallerySwiper />
+        </div>
+        <DiscountCards numberOfGroups={4} top="top-428" />
+        <div className='mt-140'>
+          <ImageGallerySwiper />
+        </div>
+        <div className='mt-10'>
+          <ImageGallerySwiper />
+        </div>
+        <DiscountCards numberOfGroups={4} top="top-768" />
+        <div className='mt-140'>
+          <ImageGallerySwiper />
+        </div>
       </div>
+      <footer class="bg-[#232F3E] text-white absolute top-1100 w-full">
+        <div class="bg-[#37475A] py-3 text-center text-sm hover:bg-[#485769] cursor-pointer">
+          Back to top
+        </div>
+        <div class="max-w-7xl mx-auto py-10 px-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <div>
+            <h3 class="font-bold mb-3">Get to Know Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+              <li><a href="#" class="hover:underline">Press Releases</a></li>
+              <li><a href="#" class="hover:underline">Amazon Science</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3">Connect with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Facebook</a></li>
+              <li><a href="#" class="hover:underline">Twitter</a></li>
+              <li><a href="#" class="hover:underline">Instagram</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3">Make Money with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Sell on Amazon</a></li>
+              <li><a href="#" class="hover:underline">Sell under Amazon Accelerator</a></li>
+              <li><a href="#" class="hover:underline">Protect and Build Your Brand</a></li>
+              <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3">Let Us Help You</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">COVID-19 and Amazon</a></li>
+              <li><a href="#" class="hover:underline">Your Account</a></li>
+              <li><a href="#" class="hover:underline">Returns Centre</a></li>
+              <li><a href="#" class="hover:underline">Help</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-700"></div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-3 py-6 text-xs text-gray-300">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-5" />
+          <p>© 2025, Amazon Clone, All rights reserved</p>
+        </div>
+      </footer>
     </div>
   )
 }
